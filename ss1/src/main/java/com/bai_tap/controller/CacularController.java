@@ -15,7 +15,7 @@ public class CacularController {
 
     @GetMapping("")
     public String greeting() {
-        return "/index";
+        return "result";
     }
 
     @PostMapping("/convert")
@@ -24,7 +24,7 @@ public class CacularController {
         if (money < 0) {
             model.addAttribute("result" + " not format");
         }
-        return "/index";
+        return "result";
     }
 
 }
