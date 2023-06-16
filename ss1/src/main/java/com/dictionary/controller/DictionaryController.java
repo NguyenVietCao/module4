@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Controller
-public class Dictionary {
+public class DictionaryController {
 @PostMapping
     public String dictionary(@RequestParam("input") String traslate , Model model){
 //    model.addAttribute("traslate",traslate);

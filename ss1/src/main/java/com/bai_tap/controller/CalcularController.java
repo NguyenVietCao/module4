@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.bai_tap.service.IChangeMoneyService;
 
 @Controller
-public class CacularController {
+public class CalcularController {
     @Autowired
     private IChangeMoneyService changeMoneyService;
 
@@ -20,9 +20,10 @@ public class CacularController {
 
     @PostMapping("/convert")
     public String convert(@RequestParam("usd") double money, Model model) {
-        model.addAttribute("result", changeMoneyService.convertMoney(money));
         if (money < 0) {
             model.addAttribute("result" + " not format");
+        } else {
+            model.addAttribute("result", changeMoneyService.convertMoney(money));
         }
         return "result";
     }
