@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+    <meta charset="UTF-8">
+    <title>User</title>
+
+</head>
+<body>
+
+<form action="/create" method="post" th:object="${user}">
+    <h1>Create New User</h1>
+    <table>
+        <tr>
+            <td><label for="firstName">firstName</label></td>
+            <td><input id="firstName" name="firstName" th:field="*{firstName}" type="text"></td>
+            <td><span style="color: red" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></span></td>
+        </tr>
+        <br>
+        <tr>
+            <td><label for="lastName">lastName</label></td>
+            <td><input id="lastName" name="lastName" type="text" th:field="*{lastName}"></td>
+            <td><span style="color: red" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></span></td>
+        </tr>
+        <br>
+        <tr>
+            <td><label for="phoneNumber">phoneNumber</label></td>
+            <td><input id="phoneNumber" name="phoneNumber" type="number" th:field="*{phoneNumber}"></td>
+            <td><span style="color: red" th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"></span>
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td><label for="age">age</label></td>
+            <td><input id="age" name="age" type="number" th:field="*{age}"></td>
+            <td><span style="color: red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></span></td>
+        </tr>
+        <br>
+        <tr>
+            <td><label for="email">email</label></td>
+            <td><input id="email" name="email" type="text" th:field="*{email}"></td>
+            <td><span style="color: red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span></td>
+        </tr>
+
+    </table>
+    <input type="submit" value="Submit">
+</form>
+</body>
+<footer th:replace="/layout :: footer"></footer>
+</html>
