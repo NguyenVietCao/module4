@@ -5,11 +5,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed732010-025f-41c4-9feb-29530348d5f2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ds_kh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../Ds_kh/customer-management" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss2/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss2/src/main/java/bai1/controller/SandwichController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss2/src/main/java/bai2/controller/CalculatorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss2/src/main/java/bai2/service/CalculatorServiceIplm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss2/src/main/java/bai2/service/ICalculatorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss2/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss2/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss2/src/main/webapp/WEB-INF/views/displayCalculator.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss2/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ds_kh/customer-management" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/.gradle/7.1.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/.gradle/7.1.1/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/.gradle/7.1.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/.gradle/7.1.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/.gradle/7.1.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/.gradle/7.1.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/.gradle/7.1.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/build/classes/java/main/com/example/codegym/controller/GreetingController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/build/libs/SpringGreeting-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/build/resources/main/META-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/src/main/java/com/example/codegym/controller/GreetingController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/src/main/resources/META-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/src/main/webapp/WEB-INF/view/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringGreeting/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/example/tien_te/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/example/tien_te/HelloResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/resources/META-INF/beans.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bai_tap/controller/CacularController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bai_tap/controller/CalcularController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dictionary/controller/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dictionary/controller/DictionaryController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +167,9 @@
       <updated>1686823848238</updated>
       <workItem from="1686823849944" duration="1260000" />
       <workItem from="1686835459116" duration="358000" />
-      <workItem from="1686885413498" duration="349000" />
+      <workItem from="1686885413498" duration="820000" />
+      <workItem from="1686898026553" duration="17000" />
+      <workItem from="1686899079211" duration="1306000" />
     </task>
     <servers />
   </component>
