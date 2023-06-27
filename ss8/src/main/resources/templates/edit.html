@@ -5,22 +5,30 @@
     <title>Title</title>
 </head>
 <body>
-<form th:action="@{/edit}" method="post" th:object="${song}">
+<form th:action="@{/edit}" method="post" th:object="${songCreationDto}">
     <h1>Edit Song</h1>
     <table>
         <tr>
+            <td><input id="id" name="id" type="hidden" th:field ="*{id}" ></td>
+        </tr>
+        <tr>
+
+
             <td><label for="songName">songName</label></td>
             <td><input id="songName" name="songName" type="text" th:field ="*{songName}"></td>
+            <td><span style="color: red" th:if="${#fields.hasErrors('songName')}" th:errors="*{songName}"></span></td>
         </tr>
         <br>
         <tr>
             <td><label for="singer">singer</label></td>
             <td><input id="singer" name="singer" type="text" th:field = "*{singer}"></td>
+            <td><span style="color: red" th:if="${#fields.hasErrors('singer')}" th:errors="*{singer}"></span></td>
         </tr>
         <br>
         <tr>
             <td><label for="kindOfMusic">kindOfMusic</label></td>
             <td><input id="kindOfMusic" name="kindOfMusic" type="text" th:field = "*{kindOfMusic}"></td>
+            <td><span style="color: red" th:if="${#fields.hasErrors('kindOfMusic')}" th:errors="*{kindOfMusic}"></span></td>
         </tr>
 
     </table>

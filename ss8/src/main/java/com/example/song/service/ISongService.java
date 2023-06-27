@@ -11,5 +11,7 @@ public interface ISongService {
 
     boolean deleteSong(int id);
 
-    void editSong(int id);
+    void editSong(Song song);
+
+    Song getSongById(int id);
 }

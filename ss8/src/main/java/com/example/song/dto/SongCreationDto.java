@@ -8,14 +8,15 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
 public class SongCreationDto implements Validator {
+    private int id;
 
-    @Pattern(regexp = "^([\\w\\s]){1,800}$")
+//    @Pattern(regexp = "^([\\w\\s]){1,800}$")
     private String songName;
 
-    @Pattern(regexp = "^([\\w\\s]){1,300}$")
+//    @Pattern(regexp = "^([\\w\\s]){1,300}$")
     private String singer;
 
-    @Pattern(regexp = "^([\\w\\s]){1,1000}$")
+//    @Pattern(regexp = "^([\\w\\s]){1,1000}$")
     private String kindOfMusic;
 
     public SongCreationDto() {
@@ -25,6 +26,14 @@ public class SongCreationDto implements Validator {
         this.songName = songName;
         this.singer = singer;
         this.kindOfMusic = kindOfMusic;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getSongName() {
@@ -59,13 +68,13 @@ public class SongCreationDto implements Validator {
     @Override
     public void validate(Object target, Errors errors) {
         SongCreationDto songCreationDto = (SongCreationDto) target;
-        if (songCreationDto.getSongName().matches("^([\\w\\s]){1,800}$")) {
+        if (!songCreationDto.getSongName().matches("^([\\w\\s]){1,800}$")) {
             errors.rejectValue("songName", "songName", "khong phai ten bai hat");
         }
-        if (songCreationDto.getSinger().matches("^([\\w\\s]){1,300}$")) {
+        if (!songCreationDto.getSinger().matches("^([\\w\\s]){1,300}$")) {
             errors.rejectValue("singer", "singer", "khong phai ten ca si");
         }
-        if (songCreationDto.getKindOfMusic().matches("^([\\w\\s]){1,1000}$")) {
+        if (!songCreationDto.getKindOfMusic().matches("^([\\w\\s]){1,1000}$")) {
             errors.rejectValue("kindOfMusic", "kindOfMusic", "khong phai loai nhac");
         }
     }
