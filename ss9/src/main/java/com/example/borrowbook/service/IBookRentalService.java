@@ -6,5 +6,7 @@ import java.util.List;
 
 public interface IBookRentalService {
     List<BookRental>getListBookRental();
-    void addBookRental(BookRental bookRental);
+    void updateBookRental(BookRental bookRental);
+    void deleteBookRental(BookRental bookRental);
+
 }

@@ -7,9 +7,7 @@ import com.example.borrowbook.service.IBookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -21,6 +19,7 @@ public class BookRentalController {
     private IBookRentalService bookRentalService;
     @Autowired
     private IBookService bookService;
+
 
     @GetMapping("/add/{id}")
     String addBookRental(@PathVariable("id") int id, Model model) {
@@ -34,7 +33,7 @@ public class BookRentalController {
         boolean flag;
         do {
             flag = false;
-            int num1 = (int) (Math.random() * 1000);
+            int num1 = (int) (Math.random() * 1000) +10000;
             bookRentalCode += num1;
             List<BookRental> bookRentalList = bookRentalService.getListBookRental();
             for (int i = 0; i < bookRentalList.size(); i++) {
@@ -47,9 +46,27 @@ public class BookRentalController {
         bookRental.setBookRentalCode(bookRentalCode);
         bookRental.setBookRentalDate(String.valueOf(LocalDate.now()));
         bookRental.setBook(book);
-        bookRentalService.addBookRental(bookRental);
+        bookRentalService.updateBookRental(bookRental);
         model.addAttribute("message", bookRentalCode);
         bookService.updateBook(book);
         return "success";
+    }
+    @PostMapping("/returnBook")
+    public String returnBook(@RequestParam ("bookRentalCode")String bookRentalCode){
+        List<BookRental>bookRentalList = bookRentalService.getListBookRental();
+        for (int i = 0; i < bookRentalList.size(); i++) {
+            if (bookRentalCode.equals(bookRentalList.get(i).getBookRentalCode())){
+                Book book = bookService.getBookById(bookRentalList.get(i).getBook().getId());
+                book.setQuantity(book.getQuantity()+1);
+                bookService.updateBook(book);
+                bookRentalService.deleteBookRental(bookRentalList.get(i));
+                return "redirect:/book";
+            }
+        }
+        return "/fail";
+    }
+    @GetMapping("/returnBook")
+    public String showForm(){
+        return "/returnBook";
     }
 }

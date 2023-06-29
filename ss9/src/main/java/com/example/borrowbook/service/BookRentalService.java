@@ -11,14 +11,20 @@ import java.util.List;
 public class BookRentalService implements IBookRentalService {
     @Autowired
     IBookRentalRepository bookRentalRepository;
+
     @Override
     public List<BookRental> getListBookRental() {
-        List<BookRental>bookRentalList = bookRentalRepository.findAll();
-        return null;
+        List<BookRental> bookRentalList = bookRentalRepository.findAll();
+        return bookRentalList;
     }
 
     @Override
-    public void addBookRental(BookRental bookRental) {
+    public void updateBookRental(BookRental bookRental) {
+        bookRentalRepository.save(bookRental);
+    }
 
+    @Override
+    public void deleteBookRental(BookRental bookRental) {
+        bookRentalRepository.delete(bookRental);
     }
 }

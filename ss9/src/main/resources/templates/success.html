@@ -7,5 +7,6 @@
 <body th:object="${bookRental}">
 <p>Mượn Sách Thành Công</p>
 <span>Mã mượn Sách của bạn là</span> <span th:if="${message}" th:text="${message}"></span>
+<a th:href="@{/book}">Back to Menu</a>
 </body>
 </html>
