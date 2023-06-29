@@ -1,5 +1,6 @@
 package com.example.borrowbook.controller;
 
+import com.example.borrowbook.exception.ExceptionBook;
 import com.example.borrowbook.model.Book;
 import com.example.borrowbook.model.BookRental;
 import com.example.borrowbook.service.IBookRentalService;
@@ -68,5 +69,9 @@ public class BookRentalController {
     @GetMapping("/returnBook")
     public String showForm(){
         return "/returnBook";
+    }
+    @ExceptionHandler(ExceptionBook.class)
+        public String error(){
+            return "error";
     }
 }
