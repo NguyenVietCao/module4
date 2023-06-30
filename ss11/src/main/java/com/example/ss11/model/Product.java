@@ -4,22 +4,26 @@ package com.example.ss11.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "product")
+@Table(name = "products")
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private double price;
+    @Column(nullable = false,columnDefinition = "longtext")
     private String description;
+    private String image;
 
     public Product() {
     }
 
-    public Product(String name, double price, String description) {
+    public Product(Long id, String name, double price, String description, String image) {
+        this.id = id;
         this.name = name;
         this.price = price;
         this.description = description;
+        this.image = image;
     }
 
     public Long getId() {
@@ -52,5 +56,13 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

@@ -5,25 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfb9de91-008c-4036-9f15-db73a210f0a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ss11/ServletInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ss11/Ss11Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ss11/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ss11/controller/ShoppingCartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ss11/model/Cart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ss11/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ss11/repository/ICartRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ss11/repository/IProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ss11/service/CartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ss11/service/ICartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ss11/service/IProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ss11/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/shopCart.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/cart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shopCart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/createProduct.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../khac/Ds_kh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../khac/Ds_kh/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ss11/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ss11/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ss11/controller/ShoppingCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ss11/controller/ShoppingCartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ss11/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ss11/model/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ss11/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ss11/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/shopCart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -53,6 +44,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -101,6 +93,10 @@
       <workItem from="1688029506398" duration="7000" />
       <workItem from="1688029521186" duration="5000" />
       <workItem from="1688029566701" duration="3527000" />
+      <workItem from="1688048714091" duration="2532000" />
+      <workItem from="1688052775329" duration="52000" />
+      <workItem from="1688052846032" duration="1337000" />
+      <workItem from="1688097490505" duration="2927000" />
     </task>
     <servers />
   </component>

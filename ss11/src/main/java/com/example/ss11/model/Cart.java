@@ -17,6 +17,8 @@ public class Cart {
         return products;
     }
 
+//    Phương thức checkIntemInCart() để kiểm tra xem sản phẩm đó đã có trong giỏ hàng hay chưa
+
     private boolean checkItemInCart(Product product) {
         for (Map.Entry<Product, Integer> entry : products.entrySet()) {
             if (entry.getKey().getId().equals(product.getId())) {
@@ -42,6 +44,18 @@ public class Cart {
             Map.Entry<Product, Integer> itemEntry = selectItemInCart(product);
             Integer newQuantity = itemEntry.getValue() + 1;
             products.replace(itemEntry.getKey(), newQuantity);
+        }
+
+    }
+    public void subtractProduct(Product product){
+        Map.Entry<Product,Integer>integerMap = selectItemInCart(product);
+
+        if (integerMap.getValue() == 0){
+            products.remove(product,0);
+        }else {
+            integerMap = selectItemInCart(product);
+            Integer newQuantity = integerMap.getValue()-1;
+            products.replace(integerMap.getKey(),newQuantity);
         }
     }
 
