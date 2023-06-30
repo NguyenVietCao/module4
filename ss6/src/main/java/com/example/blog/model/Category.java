@@ -12,9 +12,9 @@ public class Category {
 
     @Column(name = "category_name")
    private String categoryName;
-
-    @OneToMany(mappedBy = "category")
-    private List<Blog> blogList;
+//
+//    @OneToMany(mappedBy = "category")
+//    private List<Blog> blogList;
 
     public Category() {
     }
@@ -22,7 +22,7 @@ public class Category {
     public Category(int categoryId, String categoryName, List<Blog> blogList) {
         this.categoryId = categoryId;
         this.categoryName = categoryName;
-        this.blogList = blogList;
+//        this.blogList = blogList;
     }
 
     public int getCategoryId() {
@@ -41,11 +41,11 @@ public class Category {
         this.categoryName = categoryName;
     }
 
-    public List<Blog> getBlogList() {
-        return blogList;
-    }
+//    public List<Blog> getBlogList() {
+//        return blogList;
+//    }
 
-    public void setBlogList(List<Blog> blogList) {
-        this.blogList = blogList;
-    }
+//    public void setBlogList(List<Blog> blogList) {
+//        this.blogList = blogList;
+//    }
 }

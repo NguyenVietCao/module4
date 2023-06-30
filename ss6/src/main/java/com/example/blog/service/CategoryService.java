@@ -33,4 +33,9 @@ public class CategoryService implements ICategoryService {
     public void editCategory(int id) {
 
     }
+
+    @Override
+    public Category getCategoryDetail(int id) {
+        return categoryRepository.findById(id).orElse(null);
+    }
 }

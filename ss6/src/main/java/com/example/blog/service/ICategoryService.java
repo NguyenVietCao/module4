@@ -18,4 +18,6 @@ public interface ICategoryService {
     void deleteCategory(int id);
 
     void editCategory(int id);
+
+    Category getCategoryDetail(int id);
 }
