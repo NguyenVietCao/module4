@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfb9de91-008c-4036-9f15-db73a210f0a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/createProduct.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../khac/Ds_kh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../khac/Ds_kh/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ss11/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ss11/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ss11/controller/ShoppingCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ss11/controller/ShoppingCartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ss11/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ss11/model/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ss11/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ss11/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/shopCart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +88,7 @@
       <workItem from="1688048714091" duration="2532000" />
       <workItem from="1688052775329" duration="52000" />
       <workItem from="1688052846032" duration="1337000" />
-      <workItem from="1688097490505" duration="2927000" />
+      <workItem from="1688097490505" duration="3790000" />
     </task>
     <servers />
   </component>
