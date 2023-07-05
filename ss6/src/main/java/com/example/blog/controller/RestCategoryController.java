@@ -19,7 +19,7 @@ public class RestCategoryController {
     public List<Category> getCategory(){
         return this.categoryService.displayCategoryList();
     }
-    @GetMapping("{id}")
+    @GetMapping("/view/{id}")
     public Category getCategoryDetail(@PathVariable Integer id){
         return this.categoryService.getCategoryDetail(id);
     }
