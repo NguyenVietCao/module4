@@ -1,27 +1,31 @@
 package com.example.song.model;
 
-import org.springframework.data.convert.ValueConverter;
-
 import javax.persistence.*;
 
 @Entity
-@Table(name = "songs")
+@Table(name = "song")
 public class Song {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String songName;
     private String singer;
-    private String kindOfMusic;
+    private String likeNumber;
+    @ManyToOne
+    @JoinColumn
+    private Status status;
+    private String singTime;
 
     public Song() {
     }
 
-    public Song(int id, String songName, String singer, String kindOfMusic) {
+    public Song(int id, String songName, String singer, String likeNumber, Status status, String singTime) {
         this.id = id;
         this.songName = songName;
         this.singer = singer;
-        this.kindOfMusic = kindOfMusic;
+        this.likeNumber = likeNumber;
+        this.status = status;
+        this.singTime = singTime;
     }
 
     public int getId() {
@@ -48,11 +52,27 @@ public class Song {
         this.singer = singer;
     }
 
-    public String getKindOfMusic() {
-        return kindOfMusic;
+    public String getLikeNumber() {
+        return likeNumber;
     }
 
-    public void setKindOfMusic(String kindOfMusic) {
-        this.kindOfMusic = kindOfMusic;
+    public void setLikeNumber(String likeNumber) {
+        this.likeNumber = likeNumber;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    public String getSingTime() {
+        return singTime;
+    }
+
+    public void setSingTime(String singTime) {
+        this.singTime = singTime;
     }
 }

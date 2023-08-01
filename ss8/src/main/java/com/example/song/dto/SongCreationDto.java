@@ -1,31 +1,31 @@
 package com.example.song.dto;
 
+import com.example.song.model.Status;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
+
 
 public class SongCreationDto implements Validator {
+
     private int id;
-
-//    @Pattern(regexp = "^([\\w\\s]){1,800}$")
     private String songName;
-
-//    @Pattern(regexp = "^([\\w\\s]){1,300}$")
     private String singer;
+    private String likeNumber;
 
-//    @Pattern(regexp = "^([\\w\\s]){1,1000}$")
-    private String kindOfMusic;
+    private Status status;
+    private String singTime;
 
     public SongCreationDto() {
     }
 
-    public SongCreationDto(String songName, String singer, String kindOfMusic) {
+    public SongCreationDto(int id, String songName, String singer, String likeNumber, Status status, String singTime) {
+        this.id = id;
         this.songName = songName;
         this.singer = singer;
-        this.kindOfMusic = kindOfMusic;
+        this.likeNumber = likeNumber;
+        this.status = status;
+        this.singTime = singTime;
     }
 
     public int getId() {
@@ -52,12 +52,28 @@ public class SongCreationDto implements Validator {
         this.singer = singer;
     }
 
-    public String getKindOfMusic() {
-        return kindOfMusic;
+    public String getLikeNumber() {
+        return likeNumber;
     }
 
-    public void setKindOfMusic(String kindOfMusic) {
-        this.kindOfMusic = kindOfMusic;
+    public void setLikeNumber(String likeNumber) {
+        this.likeNumber = likeNumber;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    public String getSingTime() {
+        return singTime;
+    }
+
+    public void setSingTime(String singTime) {
+        this.singTime = singTime;
     }
 
     @Override
@@ -74,8 +90,6 @@ public class SongCreationDto implements Validator {
         if (!songCreationDto.getSinger().matches("^([\\w\\s]){1,300}$")) {
             errors.rejectValue("singer", "singer", "khong phai ten ca si");
         }
-        if (!songCreationDto.getKindOfMusic().matches("^([\\w\\s]){1,1000}$")) {
-            errors.rejectValue("kindOfMusic", "kindOfMusic", "khong phai loai nhac");
-        }
+
     }
 }

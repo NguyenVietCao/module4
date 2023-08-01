@@ -5,18 +5,26 @@ import com.example.song.model.Song;
 import com.example.song.service.ISongService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.transaction.Transactional;
 import javax.validation.Valid;
+import java.util.List;
 
-@Controller
+@RestController
+@RequestMapping("/api/song")
+@CrossOrigin(origins = "*")
 public class SongController {
     @Autowired
     private ISongService songService;
@@ -25,32 +33,46 @@ public class SongController {
 //    public String showList(){
 //        return "/songList";
 //    }
-    @GetMapping("/song")
-    public String displayListSong(@PageableDefault(size = 2, sort = "id", direction = Sort.Direction.DESC) Pageable pageable,
-                                  Model model) {
-        model.addAttribute("songList", songService.displayList());
-        return "songList";
-    }
 
-    @GetMapping("/create")
-    public String getCreationForm(Model model) {
-        model.addAttribute("songCreationDto", new SongCreationDto());
-        return "create";
+    @GetMapping("")
+    public ResponseEntity<List<Song>> displayListSong() {
+
+        return new ResponseEntity<>(songService.displayList(), HttpStatus.OK);
     }
 
     @PostMapping("/create")
-    public String createNewSong(@Valid @ModelAttribute SongCreationDto songCreationDto, BindingResult bindingResult, Model model, RedirectAttributes redirectAttributes) {
-        new SongCreationDto().validate(songCreationDto, bindingResult);
-        if (bindingResult.hasErrors()) {
-//            model.addAttribute("song", songCreationDto);
-            return "create";
+    public ResponseEntity<?> getCreationForm(@RequestBody Song song) {
+//        model.addAttribute("songCreationDto", new SongCreationDto());
+        try{
+            songService.addNewSong(song);
+            return ResponseEntity.status(HttpStatus.OK).body("add success");
+        }catch (Exception e){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("add Fail");
         }
-        Song song = new Song();
-        BeanUtils.copyProperties(songCreationDto, song);
-        songService.addNewSong(song);
-        redirectAttributes.addFlashAttribute("message", "Thêm Mới Thành Công");
-        return "redirect:/song";
     }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<List<Song>> deleteProduct(@PathVariable("id") Integer id) {
+
+        if (id == null) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        songService.deleteById(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+//    @PostMapping("/create")
+//    public String createNewSong(@Valid @ModelAttribute SongCreationDto songCreationDto, BindingResult bindingResult, Model model, RedirectAttributes redirectAttributes) {
+//        new SongCreationDto().validate(songCreationDto, bindingResult);
+//        if (bindingResult.hasErrors()) {
+////            model.addAttribute("song", songCreationDto);
+//            return "create";
+//        }
+//        Song song = new Song();
+//        BeanUtils.copyProperties(songCreationDto, song);
+//        songService.addNewSong(song);
+//        redirectAttributes.addFlashAttribute("message", "Thêm Mới Thành Công");
+//        return "redirect:/song";
+//    }
 
     @GetMapping("/delete/{id}")
     public String deleteSong(@PathVariable int id, RedirectAttributes redirectAttributes) {
@@ -80,12 +102,26 @@ public class SongController {
     public String editSong(@Valid @ModelAttribute SongCreationDto songCreationDto, BindingResult bindingResult, Model model, RedirectAttributes redirectAttributes) {
         new SongCreationDto().validate(songCreationDto, bindingResult);
         if (bindingResult.hasErrors()) {
-    return "edit";
+            return "edit";
         }
         Song song = new Song();
-        BeanUtils.copyProperties(songCreationDto,song);
+        BeanUtils.copyProperties(songCreationDto, song);
         songService.editSong(song);
         redirectAttributes.addFlashAttribute("message", "Sửa Thành Công");
         return "redirect:/song";
+    }
+    @Transactional
+    @GetMapping("/get")
+    public ResponseEntity<Page<Song>> getALlProduct(@RequestParam(value = "page", defaultValue = "0") Integer page) {
+//        Pageable pageable = PageRequest.of(page, 3, Sort.by(Sort.Order.desc("name")));
+        Pageable pageable = PageRequest.of(page, 3, Sort.by(Sort.Order.asc("name")));
+
+
+        Page<Song> contractsPage = songService.getPage(pageable);
+
+        if (contractsPage == null) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(contractsPage, HttpStatus.OK);
     }
 }
